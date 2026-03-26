@@ -1,0 +1,84 @@
+CREATE DATABASE BusStationDb;
+GO
+
+USE BusStationDb;
+GO
+
+CREATE TABLE Roles (
+    Id INT PRIMARY KEY,
+    Name NVARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Users (
+    Id INT IDENTITY PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    Phone NVARCHAR(20) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    RoleId INT NOT NULL,
+    CONSTRAINT FK_Users_Roles FOREIGN KEY (RoleId) REFERENCES Roles(Id)
+);
+
+CREATE TABLE Categories (
+    Id INT IDENTITY PRIMARY KEY,
+    Name NVARCHAR(80) NOT NULL UNIQUE
+);
+
+CREATE TABLE Products (
+    Id INT IDENTITY PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Price DECIMAL(18,2) NOT NULL CHECK (Price >= 0),
+    OldPrice DECIMAL(18,2) NULL,
+    Discount DECIMAL(5,2) NOT NULL DEFAULT 0 CHECK (Discount >= 0 AND Discount <= 100),
+    ImagePath NVARCHAR(255) NULL,
+    CategoryId INT NOT NULL,
+    CONSTRAINT FK_Products_Categories FOREIGN KEY (CategoryId) REFERENCES Categories(Id)
+);
+
+CREATE TABLE BusRoutes (
+    Id INT IDENTITY PRIMARY KEY,
+    DepartureCity NVARCHAR(100) NOT NULL,
+    ArrivalCity NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE BusTrips (
+    Id INT IDENTITY PRIMARY KEY,
+    RouteId INT NOT NULL,
+    DepartureTime DATETIME2 NOT NULL,
+    ArrivalTime DATETIME2 NOT NULL,
+    BusNumber NVARCHAR(50) NULL,
+    CONSTRAINT FK_BusTrips_BusRoutes FOREIGN KEY (RouteId) REFERENCES BusRoutes(Id)
+);
+
+CREATE TABLE Orders (
+    Id INT IDENTITY PRIMARY KEY,
+    UserId INT NOT NULL,
+    [Date] DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    TotalPrice DECIMAL(18,2) NOT NULL CHECK (TotalPrice >= 0),
+    CONSTRAINT FK_Orders_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE OrderItems (
+    Id INT IDENTITY PRIMARY KEY,
+    OrderId INT NOT NULL,
+    ProductId INT NOT NULL,
+    Quantity INT NOT NULL CHECK (Quantity > 0),
+    Price DECIMAL(18,2) NOT NULL CHECK (Price >= 0),
+    CONSTRAINT FK_OrderItems_Orders FOREIGN KEY (OrderId) REFERENCES Orders(Id) ON DELETE CASCADE,
+    CONSTRAINT FK_OrderItems_Products FOREIGN KEY (ProductId) REFERENCES Products(Id)
+);
+
+CREATE TABLE CartItems (
+    Id INT IDENTITY PRIMARY KEY,
+    UserId INT NOT NULL,
+    ProductId INT NOT NULL,
+    Quantity INT NOT NULL CHECK (Quantity > 0),
+    CONSTRAINT FK_CartItems_Users FOREIGN KEY (UserId) REFERENCES Users(Id) ON DELETE CASCADE,
+    CONSTRAINT FK_CartItems_Products FOREIGN KEY (ProductId) REFERENCES Products(Id),
+    CONSTRAINT UQ_CartItems_User_Product UNIQUE(UserId, ProductId)
+);
+GO
+
+INSERT INTO Roles (Id, Name)
+VALUES (1, N'Guest'), (2, N'User'), (3, N'Manager'), (4, N'Admin');
+GO
