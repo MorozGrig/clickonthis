@@ -1,49 +1,66 @@
-using System;
+using System.Drawing;
 using System.Windows.Forms;
 using BusStationApp.BLL.Services;
+using BusStationApp.UI.Helpers;
 
 namespace BusStationApp.UI.Forms
 {
     public class RegisterForm : Form
     {
         private readonly AuthService _authService = new AuthService();
-        private TextBox txtName;
-        private TextBox txtEmail;
-        private TextBox txtPhone;
-        private TextBox txtPassword;
+        private TextBox _txtName;
+        private TextBox _txtEmail;
+        private TextBox _txtPhone;
+        private TextBox _txtPassword;
 
         public RegisterForm()
         {
             Text = "Регистрация";
-            Width = 400;
-            Height = 300;
-            Init();
+            Width = 580;
+            Height = 420;
+            StartPosition = FormStartPosition.CenterParent;
+            BackColor = UiTheme.Background;
+            Font = new Font("Segoe UI", 10F);
+            InitializeControls();
         }
 
-        private void Init()
+        private void InitializeControls()
         {
-            txtName = new TextBox { Left = 20, Top = 30, Width = 330 };
-            txtEmail = new TextBox { Left = 20, Top = 80, Width = 330 };
-            txtPhone = new TextBox { Left = 20, Top = 130, Width = 330 };
-            txtPassword = new TextBox { Left = 20, Top = 140, Width = 330, PasswordChar = '*' };
-            txtPassword.Top = 180;
-            var btnSave = new Button { Left = 20, Top = 230, Width = 330, Text = "Создать аккаунт", Name = "btnSave" };
-            Controls.Add(new Label { Left = 20, Top = 10, Width = 330, Text = "Имя" });
-            Controls.Add(new Label { Left = 20, Top = 60, Width = 330, Text = "Email" });
-            Controls.Add(new Label { Left = 20, Top = 110, Width = 330, Text = "Телефон" });
-            Controls.Add(new Label { Left = 20, Top = 160, Width = 330, Text = "Пароль" });
+            var container = new Panel { Dock = DockStyle.Fill, Padding = new Padding(20), BackColor = UiTheme.Surface };
+            var group = new GroupBox { Text = "Создание аккаунта", Dock = DockStyle.Top, Height = 250 };
+            var formTable = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, Padding = new Padding(10) };
+            formTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200));
+            formTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
 
+            _txtName = new TextBox { Dock = DockStyle.Fill };
+            _txtEmail = new TextBox { Dock = DockStyle.Fill };
+            _txtPhone = new TextBox { Dock = DockStyle.Fill };
+            _txtPassword = new TextBox { Dock = DockStyle.Fill, PasswordChar = '*' };
+
+            formTable.Controls.Add(new Label { Text = "Имя", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill }, 0, 0);
+            formTable.Controls.Add(_txtName, 1, 0);
+            formTable.Controls.Add(new Label { Text = "Email", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill }, 0, 1);
+            formTable.Controls.Add(_txtEmail, 1, 1);
+            formTable.Controls.Add(new Label { Text = "Телефон", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill }, 0, 2);
+            formTable.Controls.Add(_txtPhone, 1, 2);
+            formTable.Controls.Add(new Label { Text = "Пароль", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill }, 0, 3);
+            formTable.Controls.Add(_txtPassword, 1, 3);
+
+            var btnSave = UiTheme.CreatePrimaryButton("Создать аккаунт", 220);
+            btnSave.Anchor = AnchorStyles.Left;
             btnSave.Click += (s, e) =>
             {
-                var result = _authService.Register(txtName.Text, txtEmail.Text, txtPhone.Text, txtPassword.Text);
-                MessageBox.Show(result.IsSuccess ? "Успешная регистрация." : result.ErrorMessage);
-                if (result.IsSuccess)
-                {
-                    Close();
-                }
+                var result = _authService.Register(_txtName.Text, _txtEmail.Text, _txtPhone.Text, _txtPassword.Text);
+                MessageBox.Show(result.IsSuccess ? "Регистрация выполнена успешно." : result.ErrorMessage, "Регистрация",
+                    MessageBoxButtons.OK, result.IsSuccess ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+                if (result.IsSuccess) Close();
             };
 
-            Controls.AddRange(new Control[] { txtName, txtEmail, txtPhone, txtPassword, btnSave });
+            group.Controls.Add(formTable);
+            container.Controls.Add(btnSave);
+            container.Controls.Add(group);
+            btnSave.Top = 280;
+            Controls.Add(container);
         }
     }
 }

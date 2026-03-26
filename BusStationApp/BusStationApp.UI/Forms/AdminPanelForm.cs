@@ -6,66 +6,68 @@ using System.Windows.Forms;
 using BusStationApp.BLL.Services;
 using BusStationApp.Common.Enums;
 using BusStationApp.DAL.Contexts;
+using BusStationApp.DAL.Entities;
+using BusStationApp.UI.Helpers;
 
 namespace BusStationApp.UI.Forms
 {
     public class AdminPanelForm : Form
     {
         private readonly UserRole _role;
-        private readonly ProductService _productService = new ProductService();
-        private readonly DataGridView _grid = new DataGridView();
+        private readonly TripService _tripService = new TripService();
+        private readonly DataGridView _grid = new DataGridView { Dock = DockStyle.Fill };
         private readonly ComboBox _cmbTables = new ComboBox();
 
         public AdminPanelForm(UserRole role)
         {
             _role = role;
             Text = "Панель управления";
-            Width = 980;
-            Height = 600;
+            Width = 1100;
+            Height = 640;
             StartPosition = FormStartPosition.CenterScreen;
+            BackColor = UiTheme.Background;
             Font = new Font("Segoe UI", 10F);
             Init();
+            _cmbTables.SelectedIndex = 0;
         }
 
         private void Init()
         {
-            var wrapper = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = Color.FromArgb(241, 245, 249) };
-            var filterGroup = new GroupBox { Text = "Раздел", Dock = DockStyle.Top, Height = 72 };
+            var wrapper = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = UiTheme.Surface };
+            var filterGroup = new GroupBox { Text = "Раздел", Dock = DockStyle.Top, Height = 78 };
             var gridGroup = new GroupBox { Text = "Данные", Dock = DockStyle.Fill };
-            var buttonsPanel = new Panel { Dock = DockStyle.Bottom, Height = 56 };
+            var buttonsPanel = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 56 };
 
             _cmbTables.Left = 16;
-            _cmbTables.Top = 28;
-            _cmbTables.Width = 220;
+            _cmbTables.Top = 30;
+            _cmbTables.Width = 240;
             _cmbTables.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cmbTables.Items.AddRange(new object[] { "Users", "Products", "Orders" });
+            _cmbTables.Items.AddRange(new object[] { "Users", "Trips", "Orders" });
             _cmbTables.SelectedIndexChanged += (s, e) => LoadTable();
 
-            _grid.Dock = DockStyle.Fill;
-            _grid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            _grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            _grid.BackgroundColor = Color.White;
-            _grid.BorderStyle = BorderStyle.None;
-            _grid.ReadOnly = true;
-            _grid.AllowUserToAddRows = false;
-            _grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _grid.MultiSelect = false;
-            _grid.RowHeadersVisible = false;
-            _grid.EnableHeadersVisualStyles = false;
-            _grid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 41, 59);
-            _grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            _grid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            UiTheme.StyleGrid(_grid);
 
-            var btnDelete = new Button { Left = 0, Top = 10, Width = 180, Height = 36, Text = "Удалить выбранный" };
+            var btnAdd = UiTheme.CreatePrimaryButton("Добавить", 180);
+            var btnEdit = UiTheme.CreatePrimaryButton("Редактировать", 180);
+            var btnDelete = UiTheme.CreatePrimaryButton("Удалить", 180);
+
+            btnAdd.Click += BtnAdd_Click;
+            btnEdit.Click += BtnEdit_Click;
             btnDelete.Click += BtnDelete_Click;
 
+            buttonsPanel.Controls.AddRange(new Control[] { btnAdd, btnEdit, btnDelete });
             filterGroup.Controls.Add(_cmbTables);
             gridGroup.Controls.Add(_grid);
-            buttonsPanel.Controls.Add(btnDelete);
             wrapper.Controls.Add(gridGroup);
             wrapper.Controls.Add(buttonsPanel);
             wrapper.Controls.Add(filterGroup);
             Controls.Add(wrapper);
+
+            if (!RoleAccessHelper.CanManageData(_role))
+            {
+                MessageBox.Show("Панель управления доступна только менеджеру и администратору.", "Доступ запрещен", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+            }
         }
 
         private void LoadTable()
@@ -75,37 +77,146 @@ namespace BusStationApp.UI.Forms
                 switch (_cmbTables.SelectedItem?.ToString())
                 {
                     case "Users":
-                        _grid.DataSource = context.Users.Include("Role").Select(x => new { x.Id, x.Name, x.Email, x.Phone, Role = x.Role.Name }).ToList();
+                        _grid.DataSource = context.Users.Include("Role")
+                            .Select(x => new { x.Id, x.Name, x.Email, x.Phone, Role = x.Role.Name, x.RoleId })
+                            .ToList();
                         break;
-                    case "Products":
-                        _grid.DataSource = context.Products.Include("Category").Select(x => new { x.Id, x.Name, x.Price, x.Discount, Category = x.Category.Name }).ToList();
+                    case "Trips":
+                        _grid.DataSource = context.BusTrips
+                            .Select(x => new { x.Id, x.DepartureCity, x.ArrivalCity, x.DepartureTime, x.ArrivalTime, x.Price, x.BusNumber })
+                            .OrderBy(x => x.DepartureTime)
+                            .ToList();
                         break;
                     case "Orders":
-                        _grid.DataSource = context.Orders.Include("User").Select(x => new { x.Id, User = x.User.Name, x.Date, x.TotalPrice }).ToList();
+                        _grid.DataSource = context.Orders.Include("User")
+                            .Select(x => new { x.Id, User = x.User.Name, x.Date, x.TotalPrice })
+                            .OrderByDescending(x => x.Date)
+                            .ToList();
                         break;
                 }
             }
         }
 
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            var table = _cmbTables.SelectedItem?.ToString();
+            if (table == "Users")
+            {
+                MessageBox.Show("Добавление пользователей выполняется через форму регистрации.");
+                return;
+            }
+
+            if (table == "Trips")
+            {
+                using (var dialog = new TripEditForm())
+                {
+                    if (dialog.ShowDialog() != DialogResult.OK) return;
+                    _tripService.AddTrip(dialog.Trip);
+                }
+
+                LoadTable();
+                return;
+            }
+
+            MessageBox.Show("Для заказов доступен просмотр и удаление (только для администратора).");
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            if (_grid.CurrentRow == null)
+            {
+                MessageBox.Show("Выберите запись для редактирования.");
+                return;
+            }
+
+            var table = _cmbTables.SelectedItem?.ToString();
+            var selectedId = Convert.ToInt32(_grid.CurrentRow.Cells["Id"].Value);
+
+            using (var context = new BusStationDbContext())
+            {
+                if (table == "Users")
+                {
+                    if (!RoleAccessHelper.CanManageUsers(_role))
+                    {
+                        MessageBox.Show("Редактирование пользователей доступно только администратору.");
+                        return;
+                    }
+
+                    var user = context.Users.Find(selectedId);
+                    using (var dialog = new UserEditForm(user))
+                    {
+                        if (dialog.ShowDialog() != DialogResult.OK) return;
+                        context.SaveChanges();
+                    }
+                }
+                else if (table == "Trips")
+                {
+                    var trip = context.BusTrips.Find(selectedId);
+                    if (trip == null) return;
+
+                    using (var dialog = new TripEditForm(trip))
+                    {
+                        if (dialog.ShowDialog() != DialogResult.OK) return;
+                        context.SaveChanges();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Редактирование заказов недоступно.");
+                    return;
+                }
+            }
+
+            LoadTable();
+        }
+
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (_role != UserRole.Admin)
+            if (!RoleAccessHelper.CanDelete(_role))
             {
                 MessageBox.Show("Удаление доступно только администратору.");
                 return;
             }
 
-            if (_cmbTables.SelectedItem?.ToString() != "Products" || _grid.CurrentRow == null)
+            if (_grid.CurrentRow == null)
             {
+                MessageBox.Show("Выберите запись для удаления.");
                 return;
             }
 
-            var productId = Convert.ToInt32(_grid.CurrentRow.Cells["Id"].Value);
-            var deleted = _productService.DeleteProduct(productId);
+            var table = _cmbTables.SelectedItem?.ToString();
+            var selectedId = Convert.ToInt32(_grid.CurrentRow.Cells["Id"].Value);
 
-            MessageBox.Show(deleted
-                ? "Товар удалён."
-                : "Невозможно удалить товар: он уже встречается в заказах (OrderItems).");
+            using (var context = new BusStationDbContext())
+            {
+                if (table == "Users")
+                {
+                    var user = context.Users.Find(selectedId);
+                    if (user != null)
+                    {
+                        context.Users.Remove(user);
+                        context.SaveChanges();
+                    }
+                }
+                else if (table == "Trips")
+                {
+                    _tripService.DeleteTrip(selectedId);
+                }
+                else if (table == "Orders")
+                {
+                    var order = context.Orders.Include(x => x.Items).FirstOrDefault(x => x.Id == selectedId);
+                    if (order != null)
+                    {
+                        foreach (var item in order.Items.ToList())
+                        {
+                            context.OrderItems.Remove(item);
+                        }
+
+                        context.Orders.Remove(order);
+                        context.SaveChanges();
+                    }
+                }
+            }
 
             LoadTable();
         }
