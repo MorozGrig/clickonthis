@@ -23,7 +23,7 @@ namespace BusStationApp.UI.Forms
             Font = new Font("Segoe UI", 10F);
             cardPanel.BackColor = UiTheme.Surface;
             lblTitle.ForeColor = UiTheme.TextPrimary;
-            UiTheme.ApplyPrimaryButtonStyle(btnLogin);
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -26,10 +26,7 @@ namespace BusStationApp.UI.Forms
             BackColor = UiTheme.Background;
             Font = new Font("Segoe UI", 10F);
             containerPanel.BackColor = UiTheme.Surface;
-            UiTheme.ApplyPrimaryButtonStyle(btnCatalog);
-            UiTheme.ApplyPrimaryButtonStyle(btnCart);
-            UiTheme.ApplyPrimaryButtonStyle(btnOrders);
-            UiTheme.ApplyPrimaryButtonStyle(btnAdmin);
+
         }
 
         private void ConfigureRoleAccess()

@@ -23,7 +23,7 @@ namespace BusStationApp.UI.Forms
             Font = new Font("Segoe UI", 10F);
             registrationCardPanel.BackColor = UiTheme.Surface;
             lblTitle.ForeColor = UiTheme.TextPrimary;
-            UiTheme.ApplyPrimaryButtonStyle(btnRegister);
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

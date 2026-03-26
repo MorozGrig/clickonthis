@@ -18,7 +18,7 @@ namespace BusStationApp.UI.Forms
             this.containerPanel = new System.Windows.Forms.Panel();
             this.groupCart = new System.Windows.Forms.GroupBox();
             this.gridCart = new System.Windows.Forms.DataGridView();
-            this.btnCheckout = new System.Windows.Forms.Button();
+
             this.containerPanel.SuspendLayout();
             this.groupCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCart)).BeginInit();

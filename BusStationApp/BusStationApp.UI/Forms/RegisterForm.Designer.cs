@@ -20,7 +20,7 @@ namespace BusStationApp.UI.Forms
             this.registrationCardPanel = new System.Windows.Forms.Panel();
             this.actionsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnBackToLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
+
             this.formTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.lblName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();

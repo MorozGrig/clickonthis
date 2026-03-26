@@ -35,9 +35,7 @@ namespace BusStationApp.UI.Forms
             Font = new Font("Segoe UI", 10F);
             wrapperPanel.BackColor = UiTheme.Surface;
             UiTheme.StyleGrid(gridData);
-            UiTheme.ApplyPrimaryButtonStyle(btnAdd);
-            UiTheme.ApplyPrimaryButtonStyle(btnEdit);
-            UiTheme.ApplyPrimaryButtonStyle(btnDelete);
+
         }
 
         private void cmbTables_SelectedIndexChanged(object sender, EventArgs e)

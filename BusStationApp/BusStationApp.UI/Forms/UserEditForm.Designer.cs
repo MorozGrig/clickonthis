@@ -26,7 +26,7 @@ namespace BusStationApp.UI.Forms
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
+
             this.panelContainer.SuspendLayout();
             this.groupUser.SuspendLayout();
             this.tableUser.SuspendLayout();

@@ -18,10 +18,7 @@ namespace BusStationApp.UI.Forms
             this.containerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
             this.actionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCatalog = new System.Windows.Forms.Button();
-            this.btnCart = new System.Windows.Forms.Button();
-            this.btnOrders = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
+
             this.containerPanel.SuspendLayout();
             this.actionsPanel.SuspendLayout();
             this.SuspendLayout();
