@@ -6,62 +6,21 @@ using System.Windows.Forms;
 using BusStationApp.BLL.Services;
 using BusStationApp.Common.Enums;
 using BusStationApp.DAL.Contexts;
-using BusStationApp.DAL.Entities;
 using BusStationApp.UI.Helpers;
 
 namespace BusStationApp.UI.Forms
 {
-    public class AdminPanelForm : Form
+    public partial class AdminPanelForm : Form
     {
         private readonly UserRole _role;
         private readonly TripService _tripService = new TripService();
-        private readonly DataGridView _grid = new DataGridView { Dock = DockStyle.Fill };
-        private readonly ComboBox _cmbTables = new ComboBox();
 
         public AdminPanelForm(UserRole role)
         {
             _role = role;
-            Text = "Панель управления";
-            Width = 1100;
-            Height = 640;
-            StartPosition = FormStartPosition.CenterScreen;
-            BackColor = UiTheme.Background;
-            Font = new Font("Segoe UI", 10F);
-            Init();
-            _cmbTables.SelectedIndex = 0;
-        }
-
-        private void Init()
-        {
-            var wrapper = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = UiTheme.Surface };
-            var filterGroup = new GroupBox { Text = "Раздел", Dock = DockStyle.Top, Height = 78 };
-            var gridGroup = new GroupBox { Text = "Данные", Dock = DockStyle.Fill };
-            var buttonsPanel = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 56 };
-
-            _cmbTables.Left = 16;
-            _cmbTables.Top = 30;
-            _cmbTables.Width = 240;
-            _cmbTables.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cmbTables.Items.AddRange(new object[] { "Users", "Trips", "Orders" });
-            _cmbTables.SelectedIndexChanged += (s, e) => LoadTable();
-
-            UiTheme.StyleGrid(_grid);
-
-            var btnAdd = UiTheme.CreatePrimaryButton("Добавить", 180);
-            var btnEdit = UiTheme.CreatePrimaryButton("Редактировать", 180);
-            var btnDelete = UiTheme.CreatePrimaryButton("Удалить", 180);
-
-            btnAdd.Click += BtnAdd_Click;
-            btnEdit.Click += BtnEdit_Click;
-            btnDelete.Click += BtnDelete_Click;
-
-            buttonsPanel.Controls.AddRange(new Control[] { btnAdd, btnEdit, btnDelete });
-            filterGroup.Controls.Add(_cmbTables);
-            gridGroup.Controls.Add(_grid);
-            wrapper.Controls.Add(gridGroup);
-            wrapper.Controls.Add(buttonsPanel);
-            wrapper.Controls.Add(filterGroup);
-            Controls.Add(wrapper);
+            InitializeComponent();
+            ApplyTheme();
+            cmbTables.SelectedIndex = 0;
 
             if (!RoleAccessHelper.CanManageData(_role))
             {
@@ -70,25 +29,41 @@ namespace BusStationApp.UI.Forms
             }
         }
 
+        private void ApplyTheme()
+        {
+            BackColor = UiTheme.Background;
+            Font = new Font("Segoe UI", 10F);
+            wrapperPanel.BackColor = UiTheme.Surface;
+            UiTheme.StyleGrid(gridData);
+            UiTheme.ApplyPrimaryButtonStyle(btnAdd);
+            UiTheme.ApplyPrimaryButtonStyle(btnEdit);
+            UiTheme.ApplyPrimaryButtonStyle(btnDelete);
+        }
+
+        private void cmbTables_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadTable();
+        }
+
         private void LoadTable()
         {
             using (var context = new BusStationDbContext())
             {
-                switch (_cmbTables.SelectedItem?.ToString())
+                switch (cmbTables.SelectedItem?.ToString())
                 {
                     case "Users":
-                        _grid.DataSource = context.Users.Include("Role")
+                        gridData.DataSource = context.Users.Include("Role")
                             .Select(x => new { x.Id, x.Name, x.Email, x.Phone, Role = x.Role.Name, x.RoleId })
                             .ToList();
                         break;
                     case "Trips":
-                        _grid.DataSource = context.BusTrips
+                        gridData.DataSource = context.BusTrips
                             .Select(x => new { x.Id, x.DepartureCity, x.ArrivalCity, x.DepartureTime, x.ArrivalTime, x.Price, x.BusNumber })
                             .OrderBy(x => x.DepartureTime)
                             .ToList();
                         break;
                     case "Orders":
-                        _grid.DataSource = context.Orders.Include("User")
+                        gridData.DataSource = context.Orders.Include("User")
                             .Select(x => new { x.Id, User = x.User.Name, x.Date, x.TotalPrice })
                             .OrderByDescending(x => x.Date)
                             .ToList();
@@ -97,9 +72,9 @@ namespace BusStationApp.UI.Forms
             }
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            var table = _cmbTables.SelectedItem?.ToString();
+            var table = cmbTables.SelectedItem?.ToString();
             if (table == "Users")
             {
                 MessageBox.Show("Добавление пользователей выполняется через форму регистрации.");
@@ -110,7 +85,7 @@ namespace BusStationApp.UI.Forms
             {
                 using (var dialog = new TripEditForm())
                 {
-                    if (dialog.ShowDialog() != DialogResult.OK) return;
+                    if (dialog.ShowDialog(this) != DialogResult.OK) return;
                     _tripService.AddTrip(dialog.Trip);
                 }
 
@@ -121,16 +96,16 @@ namespace BusStationApp.UI.Forms
             MessageBox.Show("Для заказов доступен просмотр и удаление (только для администратора).");
         }
 
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (_grid.CurrentRow == null)
+            if (gridData.CurrentRow == null)
             {
                 MessageBox.Show("Выберите запись для редактирования.");
                 return;
             }
 
-            var table = _cmbTables.SelectedItem?.ToString();
-            var selectedId = Convert.ToInt32(_grid.CurrentRow.Cells["Id"].Value);
+            var table = cmbTables.SelectedItem?.ToString();
+            var selectedId = Convert.ToInt32(gridData.CurrentRow.Cells["Id"].Value);
 
             using (var context = new BusStationDbContext())
             {
@@ -143,9 +118,11 @@ namespace BusStationApp.UI.Forms
                     }
 
                     var user = context.Users.Find(selectedId);
+                    if (user == null) return;
+
                     using (var dialog = new UserEditForm(user))
                     {
-                        if (dialog.ShowDialog() != DialogResult.OK) return;
+                        if (dialog.ShowDialog(this) != DialogResult.OK) return;
                         context.SaveChanges();
                     }
                 }
@@ -156,7 +133,7 @@ namespace BusStationApp.UI.Forms
 
                     using (var dialog = new TripEditForm(trip))
                     {
-                        if (dialog.ShowDialog() != DialogResult.OK) return;
+                        if (dialog.ShowDialog(this) != DialogResult.OK) return;
                         context.SaveChanges();
                     }
                 }
@@ -170,7 +147,7 @@ namespace BusStationApp.UI.Forms
             LoadTable();
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!RoleAccessHelper.CanDelete(_role))
             {
@@ -178,14 +155,14 @@ namespace BusStationApp.UI.Forms
                 return;
             }
 
-            if (_grid.CurrentRow == null)
+            if (gridData.CurrentRow == null)
             {
                 MessageBox.Show("Выберите запись для удаления.");
                 return;
             }
 
-            var table = _cmbTables.SelectedItem?.ToString();
-            var selectedId = Convert.ToInt32(_grid.CurrentRow.Cells["Id"].Value);
+            var table = cmbTables.SelectedItem?.ToString();
+            var selectedId = Convert.ToInt32(gridData.CurrentRow.Cells["Id"].Value);
 
             using (var context = new BusStationDbContext())
             {

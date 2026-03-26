@@ -18,15 +18,42 @@ namespace BusStationApp.UI.Helpers
             {
                 Text = text,
                 Width = width,
-                Height = 38,
-                FlatStyle = FlatStyle.Flat,
-                BackColor = Accent,
-                ForeColor = Color.White
+                Height = 38
             };
-            btn.FlatAppearance.BorderSize = 0;
-            btn.MouseEnter += (s, e) => btn.BackColor = AccentDark;
-            btn.MouseLeave += (s, e) => btn.BackColor = Accent;
+
+            ApplyPrimaryButtonStyle(btn);
             return btn;
+        }
+
+        public static void ApplyPrimaryButtonStyle(Button btn)
+        {
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.BackColor = Accent;
+            btn.ForeColor = Color.White;
+            btn.FlatAppearance.BorderSize = 0;
+
+            btn.MouseEnter -= HandlePrimaryButtonMouseEnter;
+            btn.MouseLeave -= HandlePrimaryButtonMouseLeave;
+            btn.MouseEnter += HandlePrimaryButtonMouseEnter;
+            btn.MouseLeave += HandlePrimaryButtonMouseLeave;
+        }
+
+        private static void HandlePrimaryButtonMouseEnter(object sender, System.EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null)
+            {
+                btn.BackColor = AccentDark;
+            }
+        }
+
+        private static void HandlePrimaryButtonMouseLeave(object sender, System.EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null)
+            {
+                btn.BackColor = Accent;
+            }
         }
 
         public static void StyleGrid(DataGridView grid)
