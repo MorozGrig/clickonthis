@@ -32,6 +32,7 @@ namespace BusStationApp.UI.Forms
             containerPanel.BackColor = UiTheme.Surface;
             UiTheme.StyleGrid(dgvProducts);
             UiTheme.StyleGrid(dgvTrips);
+
             btnAddToCart.Enabled = RoleAccessHelper.CanAddToCart(_role);
         }
 

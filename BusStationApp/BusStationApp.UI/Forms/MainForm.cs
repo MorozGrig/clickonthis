@@ -26,6 +26,7 @@ namespace BusStationApp.UI.Forms
             BackColor = UiTheme.Background;
             Font = new Font("Segoe UI", 10F);
             containerPanel.BackColor = UiTheme.Surface;
+
         }
 
         private void ConfigureRoleAccess()

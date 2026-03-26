@@ -19,9 +19,7 @@ namespace BusStationApp.UI.Forms
             this.gridGroup = new System.Windows.Forms.GroupBox();
             this.gridData = new System.Windows.Forms.DataGridView();
             this.buttonsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnDelete = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Удалить", 180);
-            this.btnEdit = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Редактировать", 180);
-            this.btnAdd = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Добавить", 180);
+
             this.filterGroup = new System.Windows.Forms.GroupBox();
             this.cmbTables = new System.Windows.Forms.ComboBox();
             this.wrapperPanel.SuspendLayout();

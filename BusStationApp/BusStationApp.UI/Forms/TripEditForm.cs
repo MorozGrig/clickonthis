@@ -28,6 +28,7 @@ namespace BusStationApp.UI.Forms
             Font = new Font("Segoe UI", 10F);
             panelContainer.BackColor = UiTheme.Surface;
             Text = _trip.Id == 0 ? "Добавление рейса" : "Редактирование рейса";
+
         }
 
         private void FillForm()

@@ -18,10 +18,7 @@ namespace BusStationApp.UI.Forms
             this.containerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
             this.actionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCatalog = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Каталог", 200);
-            this.btnCart = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Корзина", 200);
-            this.btnOrders = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("История заказов", 200);
-            this.btnAdmin = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Админ-панель", 200);
+
             this.containerPanel.SuspendLayout();
             this.actionsPanel.SuspendLayout();
             this.SuspendLayout();

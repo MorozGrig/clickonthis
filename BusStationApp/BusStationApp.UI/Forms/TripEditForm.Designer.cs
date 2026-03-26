@@ -30,7 +30,7 @@ namespace BusStationApp.UI.Forms
             this.dtArrival = new System.Windows.Forms.DateTimePicker();
             this.numPrice = new System.Windows.Forms.NumericUpDown();
             this.txtBusNumber = new System.Windows.Forms.TextBox();
-            this.btnSave = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Сохранить", 180);
+
             this.panelContainer.SuspendLayout();
             this.groupTrip.SuspendLayout();
             this.tableTrip.SuspendLayout();

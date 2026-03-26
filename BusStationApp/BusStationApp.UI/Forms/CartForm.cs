@@ -31,6 +31,7 @@ namespace BusStationApp.UI.Forms
             Font = new Font("Segoe UI", 10F);
             containerPanel.BackColor = UiTheme.Surface;
             UiTheme.StyleGrid(gridCart);
+
             btnCheckout.Enabled = RoleAccessHelper.CanCheckout(_role);
         }
 

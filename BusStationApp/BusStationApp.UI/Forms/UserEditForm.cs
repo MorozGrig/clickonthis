@@ -27,6 +27,7 @@ namespace BusStationApp.UI.Forms
             BackColor = UiTheme.Background;
             Font = new Font("Segoe UI", 10F);
             panelContainer.BackColor = UiTheme.Surface;
+
         }
 
         private void FillForm()

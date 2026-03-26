@@ -20,7 +20,7 @@ namespace BusStationApp.UI.Forms
             this.productsGroup = new System.Windows.Forms.GroupBox();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.productActionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddToCart = BusStationApp.UI.Helpers.UiTheme.CreatePrimaryButton("Добавить в корзину", 210);
+
             this.tripsGroup = new System.Windows.Forms.GroupBox();
             this.dgvTrips = new System.Windows.Forms.DataGridView();
             this.containerPanel.SuspendLayout();
