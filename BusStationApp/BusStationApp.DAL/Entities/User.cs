@@ -17,7 +17,7 @@ namespace BusStationApp.DAL.Entities
         public string Phone { get; set; }
 
         [Required, MaxLength(255)]
-        public string PasswordHash { get; set; }
+        public string Password { get; set; }
 
         public int RoleId { get; set; }
         public virtual Role Role { get; set; }
