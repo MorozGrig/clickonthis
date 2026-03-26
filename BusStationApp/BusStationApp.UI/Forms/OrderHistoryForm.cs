@@ -1,3 +1,4 @@
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -40,11 +41,23 @@ namespace BusStationApp.UI.Forms
 
             using (var context = new BusStationDbContext())
             {
-                gridOrders.DataSource = context.Orders
-                    .Where(x => x.UserId == _userId)
-                    .OrderByDescending(x => x.Date)
-                    .Select(x => new { x.Id, x.Date, x.TotalPrice })
+                var history = context.OrderItems
+                    .Include(x => x.Order)
+                    .Include(x => x.BusTrip)
+                    .Where(x => x.Order.UserId == _userId)
+                    .OrderByDescending(x => x.Order.Date)
+                    .Select(x => new
+                    {
+                        Заказ = x.OrderId,
+                        ДатаЗаказа = x.Order.Date,
+                        Отправление = x.BusTrip.DepartureCity,
+                        Прибытие = x.BusTrip.ArrivalCity,
+                        ДатаРейса = x.BusTrip.DepartureTime,
+                        Цена = x.Price
+                    })
                     .ToList();
+
+                gridOrders.DataSource = history;
             }
         }
     }

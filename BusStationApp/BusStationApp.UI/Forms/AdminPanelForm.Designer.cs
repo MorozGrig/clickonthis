@@ -19,6 +19,9 @@ namespace BusStationApp.UI.Forms
             this.gridGroup = new System.Windows.Forms.GroupBox();
             this.gridData = new System.Windows.Forms.DataGridView();
             this.buttonsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
 
             this.filterGroup = new System.Windows.Forms.GroupBox();
             this.cmbTables = new System.Windows.Forms.ComboBox();

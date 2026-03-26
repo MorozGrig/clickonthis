@@ -8,27 +8,28 @@ namespace BusStationApp.BLL.Services
 {
     public class CartService
     {
-        public void AddToCart(int userId, int productId, int quantity)
+        public void AddTripToCart(int userId, int tripId)
         {
             if (userId <= 0)
             {
-                throw new InvalidOperationException("Только авторизованный пользователь может добавлять товары в корзину.");
-            }
-
-            if (quantity <= 0)
-            {
-                throw new ArgumentException("Количество должно быть больше нуля.");
+                throw new InvalidOperationException("Только авторизованный пользователь может добавлять билеты в корзину.");
             }
 
             using (var context = new BusStationDbContext())
             {
-                var existingItem = context.CartItems.FirstOrDefault(x => x.UserId == userId && x.ProductId == productId);
-                if (existingItem != null)
+                var trip = context.BusTrips.Find(tripId);
+                if (trip == null)
                 {
-                    throw new InvalidOperationException("Товар уже добавлен в корзину.");
+                    throw new InvalidOperationException("Выбранный рейс не найден.");
                 }
 
-                context.CartItems.Add(new CartItem { UserId = userId, ProductId = productId, Quantity = quantity });
+                var existingItem = context.CartItems.FirstOrDefault(x => x.UserId == userId && x.BusTripId == tripId);
+                if (existingItem != null)
+                {
+                    throw new InvalidOperationException("Билет на этот рейс уже добавлен в корзину.");
+                }
+
+                context.CartItems.Add(new CartItem { UserId = userId, BusTripId = tripId });
                 context.SaveChanges();
             }
         }
@@ -42,17 +43,17 @@ namespace BusStationApp.BLL.Services
 
             using (var context = new BusStationDbContext())
             {
-                var items = context.CartItems.Include("Product").Where(x => x.UserId == userId).ToList();
+                var items = context.CartItems.Include(x => x.BusTrip).Where(x => x.UserId == userId).ToList();
                 if (!items.Any())
                 {
-                    throw new InvalidOperationException("Корзина пуста. Добавьте товары перед оформлением заказа.");
+                    throw new InvalidOperationException("Корзина пуста. Добавьте билеты перед оформлением заказа.");
                 }
 
                 var order = new Order
                 {
                     UserId = userId,
                     Date = DateTime.Now,
-                    TotalPrice = items.Sum(x => x.Product.Price * x.Quantity)
+                    TotalPrice = items.Sum(x => x.BusTrip.Price)
                 };
 
                 context.Orders.Add(order);
@@ -63,10 +64,10 @@ namespace BusStationApp.BLL.Services
                     context.OrderItems.Add(new OrderItem
                     {
                         OrderId = order.Id,
-                        ProductId = item.ProductId,
-                        Quantity = item.Quantity,
-                        Price = item.Product.Price
+                        BusTripId = item.BusTripId,
+                        Price = item.BusTrip.Price
                     });
+
                     context.CartItems.Remove(item);
                 }
 
