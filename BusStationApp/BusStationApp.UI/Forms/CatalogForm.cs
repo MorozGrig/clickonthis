@@ -8,7 +8,7 @@ using BusStationApp.UI.Helpers;
 
 namespace BusStationApp.UI.Forms
 {
-    public class CatalogForm : Form
+    public partial class CatalogForm : Form
     {
         private readonly ProductService _productService = new ProductService();
         private readonly CartService _cartService = new CartService();
@@ -16,53 +16,28 @@ namespace BusStationApp.UI.Forms
         private readonly int _userId;
         private readonly UserRole _role;
 
-        private readonly DataGridView _dgvProducts = new DataGridView();
-        private readonly DataGridView _dgvTrips = new DataGridView();
-
         public CatalogForm(int userId, UserRole role)
         {
             _userId = userId;
             _role = role;
-            Text = "Каталог";
-            Width = 1100;
-            Height = 620;
-            StartPosition = FormStartPosition.CenterScreen;
-            BackColor = UiTheme.Background;
-            Font = new Font("Segoe UI", 10F);
-            Init();
+            InitializeComponent();
+            ApplyTheme();
             LoadData();
         }
 
-        private void Init()
+        private void ApplyTheme()
         {
-            var container = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = UiTheme.Surface };
-            var split = new SplitContainer { Dock = DockStyle.Fill, Orientation = Orientation.Horizontal, SplitterDistance = 260 };
-
-            var productsGroup = new GroupBox { Text = "Товары/услуги", Dock = DockStyle.Fill };
-            var tripsGroup = new GroupBox { Text = "Рейсы", Dock = DockStyle.Fill };
-
-            UiTheme.StyleGrid(_dgvProducts);
-            UiTheme.StyleGrid(_dgvTrips);
-
-            var productActions = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 52 };
-            var btnAddToCart = UiTheme.CreatePrimaryButton("Добавить в корзину", 210);
+            BackColor = UiTheme.Background;
+            Font = new Font("Segoe UI", 10F);
+            containerPanel.BackColor = UiTheme.Surface;
+            UiTheme.StyleGrid(dgvProducts);
+            UiTheme.StyleGrid(dgvTrips);
             btnAddToCart.Enabled = RoleAccessHelper.CanAddToCart(_role);
-            btnAddToCart.Click += BtnAddToCart_Click;
-            productActions.Controls.Add(btnAddToCart);
-
-            productsGroup.Controls.Add(_dgvProducts);
-            productsGroup.Controls.Add(productActions);
-            tripsGroup.Controls.Add(_dgvTrips);
-            split.Panel1.Controls.Add(productsGroup);
-            split.Panel2.Controls.Add(tripsGroup);
-
-            container.Controls.Add(split);
-            Controls.Add(container);
         }
 
         private void LoadData()
         {
-            _dgvProducts.DataSource = _productService.GetCatalog().Select(x => new
+            dgvProducts.DataSource = _productService.GetCatalog().Select(x => new
             {
                 x.Id,
                 x.Name,
@@ -71,7 +46,7 @@ namespace BusStationApp.UI.Forms
                 x.Discount
             }).ToList();
 
-            _dgvTrips.DataSource = _tripService.GetTrips().Select(x => new
+            dgvTrips.DataSource = _tripService.GetTrips().Select(x => new
             {
                 x.Id,
                 x.DepartureCity,
@@ -83,7 +58,7 @@ namespace BusStationApp.UI.Forms
             }).ToList();
         }
 
-        private void BtnAddToCart_Click(object sender, EventArgs e)
+        private void btnAddToCart_Click(object sender, EventArgs e)
         {
             if (!RoleAccessHelper.CanAddToCart(_role))
             {
@@ -91,7 +66,7 @@ namespace BusStationApp.UI.Forms
                 return;
             }
 
-            if (_dgvProducts.CurrentRow == null)
+            if (dgvProducts.CurrentRow == null)
             {
                 MessageBox.Show("Выберите товар перед добавлением в корзину.", "Каталог", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -99,7 +74,7 @@ namespace BusStationApp.UI.Forms
 
             try
             {
-                var productId = Convert.ToInt32(_dgvProducts.CurrentRow.Cells["Id"].Value);
+                var productId = Convert.ToInt32(dgvProducts.CurrentRow.Cells["Id"].Value);
                 _cartService.AddToCart(_userId, productId, 1);
                 MessageBox.Show("Товар успешно добавлен в корзину.", "Каталог", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
