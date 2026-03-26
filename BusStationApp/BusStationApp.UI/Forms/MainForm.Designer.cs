@@ -17,8 +17,11 @@ namespace BusStationApp.UI.Forms
         {
             this.containerPanel = new System.Windows.Forms.Panel();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.actionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-
+            this.actionsPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCatalog = new System.Windows.Forms.Button();
+            this.btnCart = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.containerPanel.SuspendLayout();
             this.actionsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -40,29 +43,35 @@ namespace BusStationApp.UI.Forms
             this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.headerLabel.Location = new System.Drawing.Point(20, 20);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(660, 35);
+            this.headerLabel.Size = new System.Drawing.Size(660, 40);
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Главное меню";
             // 
             // actionsPanel
             // 
-            this.actionsPanel.AutoScroll = true;
-            this.actionsPanel.Controls.Add(this.btnCatalog);
-            this.actionsPanel.Controls.Add(this.btnCart);
-            this.actionsPanel.Controls.Add(this.btnOrders);
-            this.actionsPanel.Controls.Add(this.btnAdmin);
+            this.actionsPanel.ColumnCount = 2;
+            this.actionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.actionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.actionsPanel.Controls.Add(this.btnCatalog, 0, 0);
+            this.actionsPanel.Controls.Add(this.btnCart, 1, 0);
+            this.actionsPanel.Controls.Add(this.btnOrders, 0, 1);
+            this.actionsPanel.Controls.Add(this.btnAdmin, 1, 1);
             this.actionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.actionsPanel.Location = new System.Drawing.Point(20, 55);
+            this.actionsPanel.Location = new System.Drawing.Point(20, 60);
             this.actionsPanel.Name = "actionsPanel";
-            this.actionsPanel.Size = new System.Drawing.Size(660, 275);
+            this.actionsPanel.RowCount = 3;
+            this.actionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.actionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.actionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.actionsPanel.Size = new System.Drawing.Size(660, 270);
             this.actionsPanel.TabIndex = 1;
-            this.actionsPanel.WrapContents = true;
             // 
             // btnCatalog
             // 
+            this.btnCatalog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCatalog.Location = new System.Drawing.Point(3, 3);
             this.btnCatalog.Name = "btnCatalog";
-            this.btnCatalog.Size = new System.Drawing.Size(200, 38);
+            this.btnCatalog.Size = new System.Drawing.Size(324, 46);
             this.btnCatalog.TabIndex = 0;
             this.btnCatalog.Text = "Каталог";
             this.btnCatalog.UseVisualStyleBackColor = true;
@@ -70,9 +79,10 @@ namespace BusStationApp.UI.Forms
             // 
             // btnCart
             // 
-            this.btnCart.Location = new System.Drawing.Point(209, 3);
+            this.btnCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCart.Location = new System.Drawing.Point(333, 3);
             this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(200, 38);
+            this.btnCart.Size = new System.Drawing.Size(324, 46);
             this.btnCart.TabIndex = 1;
             this.btnCart.Text = "Корзина";
             this.btnCart.UseVisualStyleBackColor = true;
@@ -80,9 +90,10 @@ namespace BusStationApp.UI.Forms
             // 
             // btnOrders
             // 
-            this.btnOrders.Location = new System.Drawing.Point(415, 3);
+            this.btnOrders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOrders.Location = new System.Drawing.Point(3, 55);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(200, 38);
+            this.btnOrders.Size = new System.Drawing.Size(324, 46);
             this.btnOrders.TabIndex = 2;
             this.btnOrders.Text = "История заказов";
             this.btnOrders.UseVisualStyleBackColor = true;
@@ -90,9 +101,10 @@ namespace BusStationApp.UI.Forms
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(3, 47);
+            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdmin.Location = new System.Drawing.Point(333, 55);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(200, 38);
+            this.btnAdmin.Size = new System.Drawing.Size(324, 46);
             this.btnAdmin.TabIndex = 3;
             this.btnAdmin.Text = "Админ-панель";
             this.btnAdmin.UseVisualStyleBackColor = true;
@@ -104,17 +116,17 @@ namespace BusStationApp.UI.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.containerPanel);
+            this.MinimumSize = new System.Drawing.Size(640, 320);
             this.Name = "MainForm";
             this.Text = "Главное меню";
             this.containerPanel.ResumeLayout(false);
             this.actionsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Panel containerPanel;
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.FlowLayoutPanel actionsPanel;
+        private System.Windows.Forms.TableLayoutPanel actionsPanel;
         private System.Windows.Forms.Button btnCatalog;
         private System.Windows.Forms.Button btnCart;
         private System.Windows.Forms.Button btnOrders;
