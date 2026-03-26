@@ -10,6 +10,11 @@ namespace BusStationApp.BLL.Services
     {
         public void AddToCart(int userId, int productId, int quantity)
         {
+            if (userId <= 0)
+            {
+                throw new InvalidOperationException("Только авторизованный пользователь может добавлять товары в корзину.");
+            }
+
             if (quantity <= 0)
             {
                 throw new ArgumentException("Количество должно быть больше нуля.");
@@ -18,27 +23,29 @@ namespace BusStationApp.BLL.Services
             using (var context = new BusStationDbContext())
             {
                 var existingItem = context.CartItems.FirstOrDefault(x => x.UserId == userId && x.ProductId == productId);
-                if (existingItem == null)
+                if (existingItem != null)
                 {
-                    context.CartItems.Add(new CartItem { UserId = userId, ProductId = productId, Quantity = quantity });
-                }
-                else
-                {
-                    existingItem.Quantity += quantity;
+                    throw new InvalidOperationException("Товар уже добавлен в корзину.");
                 }
 
+                context.CartItems.Add(new CartItem { UserId = userId, ProductId = productId, Quantity = quantity });
                 context.SaveChanges();
             }
         }
 
         public decimal Checkout(int userId)
         {
+            if (userId <= 0)
+            {
+                throw new InvalidOperationException("Для оформления заказа необходимо войти в систему.");
+            }
+
             using (var context = new BusStationDbContext())
             {
                 var items = context.CartItems.Include("Product").Where(x => x.UserId == userId).ToList();
                 if (!items.Any())
                 {
-                    throw new InvalidOperationException("Корзина пуста.");
+                    throw new InvalidOperationException("Корзина пуста. Добавьте товары перед оформлением заказа.");
                 }
 
                 var order = new Order

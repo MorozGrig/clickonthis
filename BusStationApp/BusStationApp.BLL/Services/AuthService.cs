@@ -14,9 +14,14 @@ namespace BusStationApp.BLL.Services
     {
         public AuthResult Login(string emailOrPhone, string password)
         {
-            if (string.IsNullOrWhiteSpace(emailOrPhone) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(emailOrPhone))
             {
-                return new AuthResult { IsSuccess = false, ErrorMessage = "Заполните логин и пароль." };
+                return new AuthResult { IsSuccess = false, ErrorMessage = "Введите email или телефон." };
+            }
+
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                return new AuthResult { IsSuccess = false, ErrorMessage = "Введите пароль." };
             }
 
             try
@@ -54,11 +59,11 @@ namespace BusStationApp.BLL.Services
 
         public AuthResult Register(string name, string email, string phone, string password)
         {
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email) ||
-                string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(password))
-            {
-                return new AuthResult { IsSuccess = false, ErrorMessage = "Все поля обязательны для заполнения." };
-            }
+            if (string.IsNullOrWhiteSpace(name)) return new AuthResult { IsSuccess = false, ErrorMessage = "Введите имя." };
+            if (string.IsNullOrWhiteSpace(email)) return new AuthResult { IsSuccess = false, ErrorMessage = "Введите email." };
+            if (string.IsNullOrWhiteSpace(phone)) return new AuthResult { IsSuccess = false, ErrorMessage = "Введите телефон." };
+            if (string.IsNullOrWhiteSpace(password)) return new AuthResult { IsSuccess = false, ErrorMessage = "Введите пароль." };
+            if (password.Trim().Length < 6) return new AuthResult { IsSuccess = false, ErrorMessage = "Пароль должен содержать минимум 6 символов." };
 
             if (!InputValidator.IsValidEmail(email))
             {
@@ -69,17 +74,19 @@ namespace BusStationApp.BLL.Services
             {
                 using (var context = new BusStationDbContext())
                 {
-                    var exists = context.Users.Any(x => x.Email == email || x.Phone == phone);
+                    var normalizedEmail = email.Trim();
+                    var normalizedPhone = phone.Trim();
+                    var exists = context.Users.Any(x => x.Email == normalizedEmail || x.Phone == normalizedPhone);
                     if (exists)
                     {
-                        return new AuthResult { IsSuccess = false, ErrorMessage = "Пользователь уже существует." };
+                        return new AuthResult { IsSuccess = false, ErrorMessage = "Пользователь с таким email или телефоном уже существует." };
                     }
 
                     var user = new User
                     {
-                        Name = name,
-                        Email = email,
-                        Phone = phone,
+                        Name = name.Trim(),
+                        Email = normalizedEmail,
+                        Phone = normalizedPhone,
                         Password = password,
                         RoleId = (int)UserRole.User
                     };
