@@ -16,104 +16,37 @@ namespace BusStationApp.UI.Forms
         private void InitializeComponent()
         {
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.mainSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.productsGroup = new System.Windows.Forms.GroupBox();
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.productActionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-
-            this.tripsGroup = new System.Windows.Forms.GroupBox();
+            this.ticketsGroup = new System.Windows.Forms.GroupBox();
             this.dgvTrips = new System.Windows.Forms.DataGridView();
+            this.ticketActionsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnBuyTicket = new System.Windows.Forms.Button();
             this.containerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
-            this.mainSplitContainer.Panel1.SuspendLayout();
-            this.mainSplitContainer.Panel2.SuspendLayout();
-            this.mainSplitContainer.SuspendLayout();
-            this.productsGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            this.productActionsPanel.SuspendLayout();
-            this.tripsGroup.SuspendLayout();
+            this.ticketsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrips)).BeginInit();
+            this.ticketActionsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // containerPanel
             // 
-            this.containerPanel.Controls.Add(this.mainSplitContainer);
+            this.containerPanel.Controls.Add(this.ticketsGroup);
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerPanel.Location = new System.Drawing.Point(0, 0);
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Padding = new System.Windows.Forms.Padding(16);
-            this.containerPanel.Size = new System.Drawing.Size(1100, 620);
+            this.containerPanel.Size = new System.Drawing.Size(980, 560);
             this.containerPanel.TabIndex = 0;
             // 
-            // mainSplitContainer
+            // ticketsGroup
             // 
-            this.mainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainSplitContainer.Location = new System.Drawing.Point(16, 16);
-            this.mainSplitContainer.Name = "mainSplitContainer";
-            this.mainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // mainSplitContainer.Panel1
-            // 
-            this.mainSplitContainer.Panel1.Controls.Add(this.productsGroup);
-            // 
-            // mainSplitContainer.Panel2
-            // 
-            this.mainSplitContainer.Panel2.Controls.Add(this.tripsGroup);
-            this.mainSplitContainer.Size = new System.Drawing.Size(1068, 588);
-            this.mainSplitContainer.SplitterDistance = 260;
-            this.mainSplitContainer.TabIndex = 0;
-            // 
-            // productsGroup
-            // 
-            this.productsGroup.Controls.Add(this.dgvProducts);
-            this.productsGroup.Controls.Add(this.productActionsPanel);
-            this.productsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productsGroup.Location = new System.Drawing.Point(0, 0);
-            this.productsGroup.Name = "productsGroup";
-            this.productsGroup.Size = new System.Drawing.Size(1068, 260);
-            this.productsGroup.TabIndex = 0;
-            this.productsGroup.TabStop = false;
-            this.productsGroup.Text = "Товары/услуги";
-            // 
-            // dgvProducts
-            // 
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProducts.Location = new System.Drawing.Point(3, 25);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.RowHeadersWidth = 51;
-            this.dgvProducts.Size = new System.Drawing.Size(1062, 180);
-            this.dgvProducts.TabIndex = 0;
-            // 
-            // productActionsPanel
-            // 
-            this.productActionsPanel.Controls.Add(this.btnAddToCart);
-            this.productActionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.productActionsPanel.Location = new System.Drawing.Point(3, 205);
-            this.productActionsPanel.Name = "productActionsPanel";
-            this.productActionsPanel.Size = new System.Drawing.Size(1062, 52);
-            this.productActionsPanel.TabIndex = 1;
-            // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.Location = new System.Drawing.Point(3, 3);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(210, 38);
-            this.btnAddToCart.TabIndex = 0;
-            this.btnAddToCart.Text = "Добавить в корзину";
-            this.btnAddToCart.UseVisualStyleBackColor = true;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-            // 
-            // tripsGroup
-            // 
-            this.tripsGroup.Controls.Add(this.dgvTrips);
-            this.tripsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tripsGroup.Location = new System.Drawing.Point(0, 0);
-            this.tripsGroup.Name = "tripsGroup";
-            this.tripsGroup.Size = new System.Drawing.Size(1068, 324);
-            this.tripsGroup.TabIndex = 0;
-            this.tripsGroup.TabStop = false;
-            this.tripsGroup.Text = "Рейсы";
+            this.ticketsGroup.Controls.Add(this.dgvTrips);
+            this.ticketsGroup.Controls.Add(this.ticketActionsPanel);
+            this.ticketsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ticketsGroup.Location = new System.Drawing.Point(16, 16);
+            this.ticketsGroup.Name = "ticketsGroup";
+            this.ticketsGroup.Size = new System.Drawing.Size(948, 528);
+            this.ticketsGroup.TabIndex = 0;
+            this.ticketsGroup.TabStop = false;
+            this.ticketsGroup.Text = "Доступные билеты";
             // 
             // dgvTrips
             // 
@@ -122,39 +55,48 @@ namespace BusStationApp.UI.Forms
             this.dgvTrips.Location = new System.Drawing.Point(3, 25);
             this.dgvTrips.Name = "dgvTrips";
             this.dgvTrips.RowHeadersWidth = 51;
-            this.dgvTrips.Size = new System.Drawing.Size(1062, 296);
+            this.dgvTrips.Size = new System.Drawing.Size(942, 448);
             this.dgvTrips.TabIndex = 0;
+            // 
+            // ticketActionsPanel
+            // 
+            this.ticketActionsPanel.Controls.Add(this.btnBuyTicket);
+            this.ticketActionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ticketActionsPanel.Location = new System.Drawing.Point(3, 473);
+            this.ticketActionsPanel.Name = "ticketActionsPanel";
+            this.ticketActionsPanel.Size = new System.Drawing.Size(942, 52);
+            this.ticketActionsPanel.TabIndex = 1;
+            // 
+            // btnBuyTicket
+            // 
+            this.btnBuyTicket.Location = new System.Drawing.Point(3, 3);
+            this.btnBuyTicket.Name = "btnBuyTicket";
+            this.btnBuyTicket.Size = new System.Drawing.Size(210, 38);
+            this.btnBuyTicket.TabIndex = 0;
+            this.btnBuyTicket.Text = "Купить";
+            this.btnBuyTicket.UseVisualStyleBackColor = true;
+            this.btnBuyTicket.Click += new System.EventHandler(this.btnBuyTicket_Click);
             // 
             // CatalogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 620);
+            this.ClientSize = new System.Drawing.Size(980, 560);
             this.Controls.Add(this.containerPanel);
             this.Name = "CatalogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Каталог";
+            this.Text = "Каталог билетов";
             this.containerPanel.ResumeLayout(false);
-            this.mainSplitContainer.Panel1.ResumeLayout(false);
-            this.mainSplitContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).EndInit();
-            this.mainSplitContainer.ResumeLayout(false);
-            this.productsGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-            this.productActionsPanel.ResumeLayout(false);
-            this.tripsGroup.ResumeLayout(false);
+            this.ticketsGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrips)).EndInit();
+            this.ticketActionsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Panel containerPanel;
-        private System.Windows.Forms.SplitContainer mainSplitContainer;
-        private System.Windows.Forms.GroupBox productsGroup;
-        private System.Windows.Forms.DataGridView dgvProducts;
-        private System.Windows.Forms.FlowLayoutPanel productActionsPanel;
-        private System.Windows.Forms.Button btnAddToCart;
-        private System.Windows.Forms.GroupBox tripsGroup;
+        private System.Windows.Forms.GroupBox ticketsGroup;
         private System.Windows.Forms.DataGridView dgvTrips;
+        private System.Windows.Forms.FlowLayoutPanel ticketActionsPanel;
+        private System.Windows.Forms.Button btnBuyTicket;
     }
 }

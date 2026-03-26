@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BusStationApp.DAL.Entities
@@ -21,5 +22,8 @@ namespace BusStationApp.DAL.Entities
 
         [MaxLength(50)]
         public string BusNumber { get; set; }
+
+        public virtual ICollection<OrderItem> OrderItems { get; set; } = new HashSet<OrderItem>();
+        public virtual ICollection<CartItem> CartItems { get; set; } = new HashSet<CartItem>();
     }
 }

@@ -37,6 +37,12 @@ namespace BusStationApp.UI.Forms
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            if (gridCart.Rows.Count == 0)
+            {
+                MessageBox.Show("Нельзя оформить пустую корзину.", "Корзина", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             try
             {
                 var total = _cartService.Checkout(_userId);
@@ -61,15 +67,16 @@ namespace BusStationApp.UI.Forms
             using (var context = new BusStationDbContext())
             {
                 var data = context.CartItems
-                    .Include("Product")
+                    .Include(x => x.BusTrip)
                     .Where(x => x.UserId == _userId)
+                    .OrderBy(x => x.BusTrip.DepartureTime)
                     .Select(x => new
                     {
                         x.Id,
-                        Product = x.Product.Name,
-                        x.Quantity,
-                        UnitPrice = x.Product.Price,
-                        Total = x.Product.Price * x.Quantity
+                        Отправление = x.BusTrip.DepartureCity,
+                        Прибытие = x.BusTrip.ArrivalCity,
+                        Дата = x.BusTrip.DepartureTime,
+                        Цена = x.BusTrip.Price
                     })
                     .ToList();
 

@@ -10,7 +10,6 @@ namespace BusStationApp.UI.Forms
 {
     public partial class CatalogForm : Form
     {
-        private readonly ProductService _productService = new ProductService();
         private readonly CartService _cartService = new CartService();
         private readonly TripService _tripService = new TripService();
         private readonly int _userId;
@@ -22,7 +21,7 @@ namespace BusStationApp.UI.Forms
             _role = role;
             InitializeComponent();
             ApplyTheme();
-            LoadData();
+            LoadTrips();
         }
 
         private void ApplyTheme()
@@ -30,54 +29,44 @@ namespace BusStationApp.UI.Forms
             BackColor = UiTheme.Background;
             Font = new Font("Segoe UI", 10F);
             containerPanel.BackColor = UiTheme.Surface;
-            UiTheme.StyleGrid(dgvProducts);
             UiTheme.StyleGrid(dgvTrips);
 
-            btnAddToCart.Enabled = RoleAccessHelper.CanAddToCart(_role);
+            btnBuyTicket.Enabled = RoleAccessHelper.CanAddToCart(_role);
         }
 
-        private void LoadData()
+        private void LoadTrips()
         {
-            dgvProducts.DataSource = _productService.GetCatalog().Select(x => new
-            {
-                x.Id,
-                x.Name,
-                Category = x.Category.Name,
-                x.Price,
-                x.Discount
-            }).ToList();
-
-            dgvTrips.DataSource = _tripService.GetTrips().Select(x => new
-            {
-                x.Id,
-                x.DepartureCity,
-                x.ArrivalCity,
-                x.DepartureTime,
-                x.ArrivalTime,
-                x.Price,
-                x.BusNumber
-            }).ToList();
+            dgvTrips.DataSource = _tripService.GetTrips()
+                .Select(x => new
+                {
+                    x.Id,
+                    Отправление = x.DepartureCity,
+                    Прибытие = x.ArrivalCity,
+                    Дата = x.DepartureTime,
+                    Цена = x.Price
+                })
+                .ToList();
         }
 
-        private void btnAddToCart_Click(object sender, EventArgs e)
+        private void btnBuyTicket_Click(object sender, EventArgs e)
         {
             if (!RoleAccessHelper.CanAddToCart(_role))
             {
-                MessageBox.Show("Гость не может добавлять товары в корзину. Войдите в систему.", "Доступ запрещен", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Гость не может покупать билеты. Войдите в систему.", "Доступ запрещен", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (dgvProducts.CurrentRow == null)
+            if (dgvTrips.CurrentRow == null)
             {
-                MessageBox.Show("Выберите товар перед добавлением в корзину.", "Каталог", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Выберите рейс перед покупкой билета.", "Каталог", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             try
             {
-                var productId = Convert.ToInt32(dgvProducts.CurrentRow.Cells["Id"].Value);
-                _cartService.AddToCart(_userId, productId, 1);
-                MessageBox.Show("Товар успешно добавлен в корзину.", "Каталог", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var tripId = Convert.ToInt32(dgvTrips.CurrentRow.Cells["Id"].Value);
+                _cartService.AddTripToCart(_userId, tripId);
+                MessageBox.Show("Билет добавлен в корзину.", "Каталог", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

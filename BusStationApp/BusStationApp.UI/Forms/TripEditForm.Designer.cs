@@ -30,6 +30,7 @@ namespace BusStationApp.UI.Forms
             this.dtArrival = new System.Windows.Forms.DateTimePicker();
             this.numPrice = new System.Windows.Forms.NumericUpDown();
             this.txtBusNumber = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
 
             this.panelContainer.SuspendLayout();
             this.groupTrip.SuspendLayout();

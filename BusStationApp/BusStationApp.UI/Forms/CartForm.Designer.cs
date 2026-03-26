@@ -18,7 +18,7 @@ namespace BusStationApp.UI.Forms
             this.containerPanel = new System.Windows.Forms.Panel();
             this.groupCart = new System.Windows.Forms.GroupBox();
             this.gridCart = new System.Windows.Forms.DataGridView();
-
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.containerPanel.SuspendLayout();
             this.groupCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCart)).BeginInit();
@@ -44,7 +44,7 @@ namespace BusStationApp.UI.Forms
             this.groupCart.Size = new System.Drawing.Size(748, 430);
             this.groupCart.TabIndex = 0;
             this.groupCart.TabStop = false;
-            this.groupCart.Text = "Товары в корзине";
+            this.groupCart.Text = "Билеты в корзине";
             // 
             // gridCart
             // 
@@ -79,7 +79,6 @@ namespace BusStationApp.UI.Forms
             this.groupCart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCart)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Panel containerPanel;

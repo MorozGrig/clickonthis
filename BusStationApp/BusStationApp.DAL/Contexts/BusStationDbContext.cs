@@ -26,9 +26,9 @@ namespace BusStationApp.DAL.Contexts
             modelBuilder.Entity<User>().HasIndex(u => u.Phone).IsUnique();
 
             modelBuilder.Entity<OrderItem>()
-                .HasRequired(x => x.Product)
+                .HasRequired(x => x.BusTrip)
                 .WithMany(x => x.OrderItems)
-                .HasForeignKey(x => x.ProductId)
+                .HasForeignKey(x => x.BusTripId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<CartItem>()
@@ -36,6 +36,12 @@ namespace BusStationApp.DAL.Contexts
                 .WithMany(x => x.CartItems)
                 .HasForeignKey(x => x.UserId)
                 .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<CartItem>()
+                .HasRequired(x => x.BusTrip)
+                .WithMany(x => x.CartItems)
+                .HasForeignKey(x => x.BusTripId)
+                .WillCascadeOnDelete(false);
 
             base.OnModelCreating(modelBuilder);
         }

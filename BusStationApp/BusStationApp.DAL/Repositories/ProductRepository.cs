@@ -34,12 +34,6 @@ namespace BusStationApp.DAL.Repositories
 
         public bool Delete(int productId)
         {
-            var hasOrders = _context.OrderItems.Any(x => x.ProductId == productId);
-            if (hasOrders)
-            {
-                return false;
-            }
-
             var product = _context.Products.Find(productId);
             if (product == null)
             {
