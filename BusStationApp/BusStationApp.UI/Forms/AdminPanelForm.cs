@@ -1,5 +1,6 @@
 using System;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using BusStationApp.BLL.Services;
@@ -19,30 +20,52 @@ namespace BusStationApp.UI.Forms
         {
             _role = role;
             Text = "Панель управления";
-            Width = 900;
-            Height = 550;
+            Width = 980;
+            Height = 600;
+            StartPosition = FormStartPosition.CenterScreen;
+            Font = new Font("Segoe UI", 10F);
             Init();
         }
 
         private void Init()
         {
-            _cmbTables.Left = 20;
-            _cmbTables.Top = 20;
-            _cmbTables.Width = 200;
+            var wrapper = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = Color.FromArgb(241, 245, 249) };
+            var filterGroup = new GroupBox { Text = "Раздел", Dock = DockStyle.Top, Height = 72 };
+            var gridGroup = new GroupBox { Text = "Данные", Dock = DockStyle.Fill };
+            var buttonsPanel = new Panel { Dock = DockStyle.Bottom, Height = 56 };
+
+            _cmbTables.Left = 16;
+            _cmbTables.Top = 28;
+            _cmbTables.Width = 220;
+            _cmbTables.DropDownStyle = ComboBoxStyle.DropDownList;
             _cmbTables.Items.AddRange(new object[] { "Users", "Products", "Orders" });
             _cmbTables.SelectedIndexChanged += (s, e) => LoadTable();
 
-            _grid.Top = 60;
-            _grid.Left = 20;
-            _grid.Width = 840;
-            _grid.Height = 400;
+            _grid.Dock = DockStyle.Fill;
             _grid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             _grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            _grid.BackgroundColor = Color.White;
+            _grid.BorderStyle = BorderStyle.None;
+            _grid.ReadOnly = true;
+            _grid.AllowUserToAddRows = false;
+            _grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            _grid.MultiSelect = false;
+            _grid.RowHeadersVisible = false;
+            _grid.EnableHeadersVisualStyles = false;
+            _grid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 41, 59);
+            _grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            _grid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
 
-            var btnDelete = new Button { Left = 20, Top = 470, Width = 180, Text = "Удалить выбранный" };
+            var btnDelete = new Button { Left = 0, Top = 10, Width = 180, Height = 36, Text = "Удалить выбранный" };
             btnDelete.Click += BtnDelete_Click;
 
-            Controls.AddRange(new Control[] { _cmbTables, _grid, btnDelete });
+            filterGroup.Controls.Add(_cmbTables);
+            gridGroup.Controls.Add(_grid);
+            buttonsPanel.Controls.Add(btnDelete);
+            wrapper.Controls.Add(gridGroup);
+            wrapper.Controls.Add(buttonsPanel);
+            wrapper.Controls.Add(filterGroup);
+            Controls.Add(wrapper);
         }
 
         private void LoadTable()

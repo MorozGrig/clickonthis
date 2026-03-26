@@ -22,25 +22,54 @@ namespace BusStationApp.UI.Forms
             _userId = userId;
             _role = role;
             Text = "Каталог";
-            Width = 900;
-            Height = 500;
+            Width = 980;
+            Height = 560;
+            StartPosition = FormStartPosition.CenterScreen;
+            Font = new Font("Segoe UI", 10F);
             Init();
             LoadCatalog();
         }
 
         private void Init()
         {
-            dgvCatalog = new DataGridView { Dock = DockStyle.Top, Height = 380, ReadOnly = true, AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill };
+            var container = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = Color.FromArgb(241, 245, 249) };
+            var group = new GroupBox { Text = "Список товаров", Dock = DockStyle.Fill, ForeColor = Color.FromArgb(30, 41, 59) };
+
+            dgvCatalog = new DataGridView
+            {
+                Dock = DockStyle.Fill,
+                ReadOnly = true,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+                MultiSelect = false,
+                AllowUserToAddRows = false,
+                BackgroundColor = Color.White,
+                BorderStyle = BorderStyle.None
+            };
+
+            dgvCatalog.EnableHeadersVisualStyles = false;
+            dgvCatalog.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 41, 59);
+            dgvCatalog.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvCatalog.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgvCatalog.DefaultCellStyle.SelectionBackColor = Color.FromArgb(191, 219, 254);
+            dgvCatalog.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvCatalog.RowHeadersVisible = false;
+
             dgvCatalog.CellFormatting += DgvCatalog_CellFormatting;
-            var btnAddToCart = new Button { Top = 400, Left = 20, Width = 170, Text = "Добавить в корзину" };
-            var btnUploadImage = new Button { Top = 400, Left = 210, Width = 170, Text = "Загрузить изображение" };
+
+            var actionsPanel = new Panel { Dock = DockStyle.Bottom, Height = 56, Padding = new Padding(0, 8, 0, 0) };
+            var btnAddToCart = new Button { Top = 8, Left = 0, Width = 190, Height = 36, Text = "Добавить в корзину" };
+            var btnUploadImage = new Button { Top = 8, Left = 200, Width = 190, Height = 36, Text = "Загрузить изображение" };
 
             btnAddToCart.Click += BtnAddToCart_Click;
             btnUploadImage.Click += BtnUploadImage_Click;
 
-            Controls.Add(dgvCatalog);
-            Controls.Add(btnAddToCart);
-            Controls.Add(btnUploadImage);
+            actionsPanel.Controls.Add(btnAddToCart);
+            actionsPanel.Controls.Add(btnUploadImage);
+            group.Controls.Add(dgvCatalog);
+            container.Controls.Add(group);
+            container.Controls.Add(actionsPanel);
+            Controls.Add(container);
         }
 
         private void LoadCatalog()
