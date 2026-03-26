@@ -17,10 +17,10 @@ namespace BusStationApp.UI.Forms
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.cardPanel = new System.Windows.Forms.Panel();
-            this.actionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnGuest = new System.Windows.Forms.Button();
+            this.actionsPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
-
+            this.btnGuest = new System.Windows.Forms.Button();
             this.credentialsGroup = new System.Windows.Forms.GroupBox();
             this.credentialsTable = new System.Windows.Forms.TableLayoutPanel();
             this.lblLogin = new System.Windows.Forms.Label();
@@ -59,44 +59,53 @@ namespace BusStationApp.UI.Forms
             // 
             // actionsPanel
             // 
-            this.actionsPanel.Controls.Add(this.btnLogin);
-            this.actionsPanel.Controls.Add(this.btnRegister);
-            this.actionsPanel.Controls.Add(this.btnGuest);
+            this.actionsPanel.ColumnCount = 3;
+            this.actionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.actionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.actionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.actionsPanel.Controls.Add(this.btnLogin, 0, 0);
+            this.actionsPanel.Controls.Add(this.btnRegister, 1, 0);
+            this.actionsPanel.Controls.Add(this.btnGuest, 2, 0);
             this.actionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.actionsPanel.Location = new System.Drawing.Point(20, 312);
             this.actionsPanel.Name = "actionsPanel";
+            this.actionsPanel.RowCount = 1;
+            this.actionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.actionsPanel.Size = new System.Drawing.Size(472, 50);
             this.actionsPanel.TabIndex = 2;
             // 
-            // btnGuest
+            // btnLogin
             // 
-            this.btnGuest.Location = new System.Drawing.Point(366, 3);
-            this.btnGuest.Name = "btnGuest";
-            this.btnGuest.Size = new System.Drawing.Size(180, 38);
-            this.btnGuest.TabIndex = 2;
-            this.btnGuest.Text = "Продолжить как гость";
-            this.btnGuest.UseVisualStyleBackColor = true;
-            this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogin.Location = new System.Drawing.Point(3, 3);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(151, 44);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "Войти";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(180, 3);
+            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegister.Location = new System.Drawing.Point(160, 3);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(180, 38);
+            this.btnRegister.Size = new System.Drawing.Size(151, 44);
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "Регистрация";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // btnLogin
+            // btnGuest
             // 
-            this.btnLogin.Location = new System.Drawing.Point(3, 3);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(171, 38);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Войти";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGuest.Location = new System.Drawing.Point(317, 3);
+            this.btnGuest.Name = "btnGuest";
+            this.btnGuest.Size = new System.Drawing.Size(152, 44);
+            this.btnGuest.TabIndex = 2;
+            this.btnGuest.Text = "Продолжить как гость";
+            this.btnGuest.UseVisualStyleBackColor = true;
+            this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
             // credentialsGroup
             // 
@@ -193,12 +202,11 @@ namespace BusStationApp.UI.Forms
             this.credentialsTable.ResumeLayout(false);
             this.credentialsTable.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel cardPanel;
-        private System.Windows.Forms.FlowLayoutPanel actionsPanel;
+        private System.Windows.Forms.TableLayoutPanel actionsPanel;
         private System.Windows.Forms.Button btnGuest;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
