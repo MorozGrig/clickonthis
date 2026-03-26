@@ -1,6 +1,6 @@
 using System;
-using System.Drawing;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using BusStationApp.BLL.Services;
@@ -10,53 +10,42 @@ using BusStationApp.UI.Helpers;
 
 namespace BusStationApp.UI.Forms
 {
-    public class CartForm : Form
+    public partial class CartForm : Form
     {
         private readonly int _userId;
         private readonly UserRole _role;
         private readonly CartService _cartService = new CartService();
-        private readonly DataGridView _grid = new DataGridView();
 
         public CartForm(int userId, UserRole role)
         {
             _userId = userId;
             _role = role;
-            Text = "Корзина";
-            Width = 780;
-            Height = 500;
-            BackColor = UiTheme.Background;
-            Font = new Font("Segoe UI", 10F);
-            Init();
+            InitializeComponent();
+            ApplyTheme();
             LoadCart();
         }
 
-        private void Init()
+        private void ApplyTheme()
         {
-            var container = new Panel { Dock = DockStyle.Fill, Padding = new Padding(16), BackColor = UiTheme.Surface };
-            var group = new GroupBox { Text = "Товары в корзине", Dock = DockStyle.Fill };
-            UiTheme.StyleGrid(_grid);
-
-            var btnCheckout = UiTheme.CreatePrimaryButton("Оформить заказ", 200);
+            BackColor = UiTheme.Background;
+            Font = new Font("Segoe UI", 10F);
+            containerPanel.BackColor = UiTheme.Surface;
+            UiTheme.StyleGrid(gridCart);
             btnCheckout.Enabled = RoleAccessHelper.CanCheckout(_role);
-            btnCheckout.Dock = DockStyle.Bottom;
-            btnCheckout.Click += (s, e) =>
-            {
-                try
-                {
-                    var total = _cartService.Checkout(_userId);
-                    MessageBox.Show($"Заказ оформлен. Сумма: {total:C2}", "Заказ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadCart();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            };
+        }
 
-            group.Controls.Add(_grid);
-            container.Controls.Add(group);
-            container.Controls.Add(btnCheckout);
-            Controls.Add(container);
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var total = _cartService.Checkout(_userId);
+                MessageBox.Show($"Заказ оформлен. Сумма: {total:C2}", "Заказ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadCart();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void LoadCart()
@@ -83,7 +72,7 @@ namespace BusStationApp.UI.Forms
                     })
                     .ToList();
 
-                _grid.DataSource = data;
+                gridCart.DataSource = data;
             }
         }
     }
