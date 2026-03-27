@@ -67,7 +67,7 @@ namespace BusStationApp.BLL.Services
 
             if (!InputValidator.IsValidEmail(email))
             {
-                return new AuthResult { IsSuccess = false, ErrorMessage = "Введите корректный email." };
+                return new AuthResult { IsSuccess = false, ErrorMessage = "Введите корректный email(text@example.com)!" };
             }
 
             try

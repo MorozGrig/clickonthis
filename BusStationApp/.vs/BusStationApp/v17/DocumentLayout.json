@@ -1,0 +1,385 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\adminpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\adminpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\adminpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\adminpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\catalogform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\catalogform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\catalogform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\catalogform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.common\\validation\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|solutionrelative:busstationapp.common\\validation\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\orderhistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\orderhistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\tripeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\tripeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\usereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\usereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\tripeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\tripeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.common\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|solutionrelative:busstationapp.common\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.common\\dtos\\authresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|solutionrelative:busstationapp.common\\dtos\\authresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.common\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|BusStationApp.Common\\BusStationApp.Common.csproj|solutionrelative:busstationapp.common\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\orderhistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\orderhistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|BusStationApp.BLL\\BusStationApp.BLL.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|BusStationApp.BLL\\BusStationApp.BLL.csproj|solutionrelative:busstationapp.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.ui\\forms\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|BusStationApp.UI\\BusStationApp.UI.csproj|solutionrelative:busstationapp.ui\\forms\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|BusStationApp.DAL\\BusStationApp.DAL.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\busstationapp\\busstationapp.dal\\entities\\bustrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|BusStationApp.DAL\\BusStationApp.DAL.csproj|solutionrelative:busstationapp.dal\\entities\\bustrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminPanelForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\AdminPanelForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\AdminPanelForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\AdminPanelForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\AdminPanelForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:08:53.292Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InputValidator.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\Validation\\InputValidator.cs",
+              "RelativeDocumentMoniker": "BusStationApp.Common\\Validation\\InputValidator.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\Validation\\InputValidator.cs",
+              "RelativeToolTip": "BusStationApp.Common\\Validation\\InputValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:53:37.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\RegisterForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\RegisterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\RegisterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:00:11.481Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CatalogForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CatalogForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\CatalogForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CatalogForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\CatalogForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:22:54.299Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CatalogForm.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CatalogForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\CatalogForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CatalogForm.cs",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\CatalogForm.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAADgv2IAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:22:56.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.config",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\App.config",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\App.config",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\App.config",
+              "RelativeToolTip": "BusStationApp.UI\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-03-27T09:51:50.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\UserEditForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\UserEditForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\UserEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\UserEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:59:45.897Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminPanelForm.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\AdminPanelForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\AdminPanelForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\AdminPanelForm.cs",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\AdminPanelForm.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:09:00.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\MainForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:56:38.666Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\LoginForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:49:54.749Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderHistoryForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\OrderHistoryForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\OrderHistoryForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\OrderHistoryForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\OrderHistoryForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:09:52.298Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TripEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\TripEditForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\TripEditForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\TripEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\TripEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:57:18.818Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "BusStationApp.Common\\Enums\\UserRole.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\Enums\\UserRole.cs",
+              "RelativeToolTip": "BusStationApp.Common\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:53:58.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TripEditForm.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\TripEditForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\TripEditForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\TripEditForm.cs",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\TripEditForm.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAiwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:58:10.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CartForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\CartForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\CartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:26:59.593Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthResult.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\DTOs\\AuthResult.cs",
+              "RelativeDocumentMoniker": "BusStationApp.Common\\DTOs\\AuthResult.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\DTOs\\AuthResult.cs",
+              "RelativeToolTip": "BusStationApp.Common\\DTOs\\AuthResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:53:54.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "BusStationApp.Common\\Interfaces\\IAuthService.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.Common\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "BusStationApp.Common\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:53:29.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderHistoryForm.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\OrderHistoryForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\OrderHistoryForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\OrderHistoryForm.cs",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\OrderHistoryForm.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:09:56.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CartForm.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CartForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\CartForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\CartForm.cs",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\CartForm.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:27:02.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "BusStationApp.UI\\Forms\\RegisterForm.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.UI\\Forms\\RegisterForm.cs",
+              "RelativeToolTip": "BusStationApp.UI\\Forms\\RegisterForm.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:58:02.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.BLL\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "BusStationApp.BLL\\Services\\AuthService.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.BLL\\Services\\AuthService.cs",
+              "RelativeToolTip": "BusStationApp.BLL\\Services\\AuthService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwD0AAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:54:36.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BusTrip.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.DAL\\Entities\\BusTrip.cs",
+              "RelativeDocumentMoniker": "BusStationApp.DAL\\Entities\\BusTrip.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0430\u0432\u0442\u043E\u0432\u043E\u043A\u0437\u0430\u043B\u0430\\clickonthis\\BusStationApp\\BusStationApp.DAL\\Entities\\BusTrip.cs",
+              "RelativeToolTip": "BusStationApp.DAL\\Entities\\BusTrip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:49:12.925Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

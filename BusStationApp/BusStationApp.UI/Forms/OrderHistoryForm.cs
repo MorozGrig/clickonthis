@@ -48,12 +48,14 @@ namespace BusStationApp.UI.Forms
                     .OrderByDescending(x => x.Order.Date)
                     .Select(x => new
                     {
-                        Заказ = x.OrderId,
-                        ДатаЗаказа = x.Order.Date,
+                        x.Id,
+                        Дата_Заказа = x.Order.Date,
                         Отправление = x.BusTrip.DepartureCity,
                         Прибытие = x.BusTrip.ArrivalCity,
-                        ДатаРейса = x.BusTrip.DepartureTime,
-                        Цена = x.Price
+                        Время_отправления = x.BusTrip.DepartureTime,
+                        Время_прибытия = x.BusTrip.ArrivalTime,
+                        Цена = x.Price,
+                        Номер_автобуса = x.BusTrip.BusNumber
                     })
                     .ToList();
 

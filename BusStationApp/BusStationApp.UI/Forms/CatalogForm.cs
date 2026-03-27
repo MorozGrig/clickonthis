@@ -14,6 +14,8 @@ namespace BusStationApp.UI.Forms
         private readonly TripService _tripService = new TripService();
         private readonly int _userId;
         private readonly UserRole _role;
+        private Button btnSortByDeparture;
+        private Button btnSortByArrival;
 
         public CatalogForm(int userId, UserRole role)
         {
@@ -21,6 +23,7 @@ namespace BusStationApp.UI.Forms
             _role = role;
             InitializeComponent();
             ApplyTheme();
+            CreateSortButtons();
             LoadTrips();
         }
 
@@ -34,6 +37,34 @@ namespace BusStationApp.UI.Forms
             btnBuyTicket.Enabled = RoleAccessHelper.CanAddToCart(_role);
         }
 
+        private void CreateSortButtons()
+        {
+            btnSortByDeparture = new Button
+            {
+                Text = "Сортировать по городу отправления",
+                Location = new Point(10, 10),
+                Size = new Size(250, 30)
+            };
+            btnSortByDeparture.Click += (s, e) =>
+            {
+                SortTripsByCity(sortByDeparture: true);
+            };
+
+            btnSortByArrival = new Button
+            {
+                Text = "Сортировать по городу прибытия",
+                Location = new Point(btnSortByDeparture.Right + 10, 10),
+                Size = new Size(250, 30)
+            };
+            btnSortByArrival.Click += (s, e) =>
+            {
+                SortTripsByCity(sortByDeparture: false);
+            };
+
+            containerPanel.Controls.Add(btnSortByDeparture);
+            containerPanel.Controls.Add(btnSortByArrival);
+        }
+
         private void LoadTrips()
         {
             dgvTrips.DataSource = _tripService.GetTrips()
@@ -42,10 +73,36 @@ namespace BusStationApp.UI.Forms
                     x.Id,
                     Отправление = x.DepartureCity,
                     Прибытие = x.ArrivalCity,
-                    Дата = x.DepartureTime,
-                    Цена = x.Price
+                    Время_отправления = x.DepartureTime,
+                    Время_прибытия = x.ArrivalTime,
+                    Цена = x.Price,
+                    Номер_автобуса = x.BusNumber
                 })
                 .ToList();
+        }
+
+        private void SortTripsByCity(bool sortByDeparture)
+        {
+            var list = dgvTrips.DataSource as System.Collections.IList;
+            if (list == null) return;
+
+            var sorted = list
+                .Cast<object>()
+                .Select(x => new
+                {
+                    Id = (int)x.GetType().GetProperty("Id").GetValue(x),
+                    Отправление = (string)x.GetType().GetProperty("Отправление").GetValue(x),
+                    Прибытие = (string)x.GetType().GetProperty("Прибытие").GetValue(x),
+                    Время_отправления = (DateTime)x.GetType().GetProperty("Время_отправления").GetValue(x),
+                    Время_прибытия = (DateTime)x.GetType().GetProperty("Время_прибытия").GetValue(x),
+                    Цена = (decimal)x.GetType().GetProperty("Цена").GetValue(x),
+                    Номер_автобуса = (string)x.GetType().GetProperty("Номер_автобуса").GetValue(x)
+                })
+                .OrderBy(x => sortByDeparture ? x.Отправление : x.Прибытие)
+                .ToList();
+
+            dgvTrips.DataSource = null;
+            dgvTrips.DataSource = sorted;
         }
 
         private void btnBuyTicket_Click(object sender, EventArgs e)

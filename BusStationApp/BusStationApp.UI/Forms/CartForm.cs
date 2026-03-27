@@ -72,11 +72,12 @@ namespace BusStationApp.UI.Forms
                     .OrderBy(x => x.BusTrip.DepartureTime)
                     .Select(x => new
                     {
-                        x.Id,
                         Отправление = x.BusTrip.DepartureCity,
                         Прибытие = x.BusTrip.ArrivalCity,
-                        Дата = x.BusTrip.DepartureTime,
-                        Цена = x.BusTrip.Price
+                        Время_отправления = x.BusTrip.DepartureTime,
+                        Время_прибытия = x.BusTrip.ArrivalTime,
+                        Цена = x.BusTrip.Price,
+                        Номер_автобуса = x.BusTrip.BusNumber
                     })
                     .ToList();
 

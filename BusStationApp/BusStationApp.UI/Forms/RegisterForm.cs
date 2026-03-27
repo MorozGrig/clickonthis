@@ -55,7 +55,7 @@ namespace BusStationApp.UI.Forms
         {
             if (string.IsNullOrWhiteSpace(txtName.Text)) return "Введите имя.";
             if (string.IsNullOrWhiteSpace(txtEmail.Text)) return "Введите email.";
-            if (!InputValidator.IsValidEmail(txtEmail.Text.Trim())) return "Введите корректный email.";
+            if (!InputValidator.IsValidEmail(txtEmail.Text.Trim())) return "Введите корректный email(text@example.com).";
             if (string.IsNullOrWhiteSpace(txtPhone.Text)) return "Введите телефон.";
             if (string.IsNullOrWhiteSpace(txtPassword.Text)) return "Введите пароль.";
             if (txtPassword.Text.Length < 6) return "Пароль должен содержать минимум 6 символов.";

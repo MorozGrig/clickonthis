@@ -51,19 +51,38 @@ namespace BusStationApp.UI.Forms
                 {
                     case "Users":
                         gridData.DataSource = context.Users.Include("Role")
-                            .Select(x => new { x.Id, x.Name, x.Email, x.Phone, Role = x.Role.Name, x.RoleId })
+                            .Select(x => new {
+                                x.Id,
+                                Имя = x.Name,
+                                Почта = x.Email,
+                                Телефон = x.Phone,
+                                Роль = x.Role.Name 
+                            })
                             .ToList();
                         break;
                     case "Trips":
                         gridData.DataSource = context.BusTrips
-                            .Select(x => new { x.Id, x.DepartureCity, x.ArrivalCity, x.DepartureTime, x.ArrivalTime, x.Price, x.BusNumber })
-                            .OrderBy(x => x.DepartureTime)
+                            .Select(x => new 
+                            { 
+                                x.Id,
+                                Отправление = x.DepartureCity,
+                                Прибытие = x.ArrivalCity,
+                                Время_отправления = x.DepartureTime,
+                                Время_прибытия = x.ArrivalTime,
+                                Цена = x.Price,
+                                Номер_автобуса = x.BusNumber 
+                            })
                             .ToList();
                         break;
                     case "Orders":
                         gridData.DataSource = context.Orders.Include("User")
-                            .Select(x => new { x.Id, User = x.User.Name, x.Date, x.TotalPrice })
-                            .OrderByDescending(x => x.Date)
+                            .Select(x => new 
+                            { 
+                                x.Id,
+                                Имя_пользователя = x.User.Name,
+                                Дата = x.Date,
+                                Сумма = x.TotalPrice 
+                            })
                             .ToList();
                         break;
                 }

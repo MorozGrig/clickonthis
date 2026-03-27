@@ -17,7 +17,7 @@ namespace BusStationApp.DAL.Entities
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
 
-        [Range(typeof(decimal), "0.01", "999999")]
+        [Range(typeof(decimal), "0", "100000")]
         public decimal Price { get; set; }
 
         [MaxLength(50)]

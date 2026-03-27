@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "R17083fI5Ac=",
+  "success": true,
+  "projectFilePath": "S:\\USERS\\53-04k\\Мороз Григорий Игоревич\\Приложения автовокзала\\clickonthis\\BusStationApp\\BusStationApp.DAL\\BusStationApp.DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\10230041\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}
